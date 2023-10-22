@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import AppLayout from './components/layout/AppLayout'
 
 export default function Home() {
   return (
-    <main className="">
+    <AppLayout>
       dawdaw
-    </main>
+    </AppLayout>
   )
 }

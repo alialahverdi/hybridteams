@@ -1,0 +1,58 @@
+.container {
+    @apply
+    z-50
+    h-24;
+
+    .header{
+        @apply
+        flex
+        text-white
+        items-center
+        justify-between
+        px-20
+        transition-all
+        duration-300
+        py-4;
+        &.scrolled {
+            @apply
+            backdrop-blur-sm
+            bg-dark
+            bg-opacity-40
+            shadow-lg
+            py-4
+            fixed
+            top-0
+            right-0
+            left-0;
+        }
+    }
+}
+
+.rightContainer {
+    @apply
+    flex
+    items-center
+    gap-8
+}
+
+.btn {
+    @apply rounded-lg;
+    &:hover{
+        box-shadow: 0 0 24px 2px rgba(253, 184, 21,.25)
+    }
+}
+
+.ulLinks {
+    @apply 
+    flex
+    gap-x-16;
+    li:hover{
+        @apply
+        opacity-60 
+        transition;
+    }
+}
+
+.register {
+    @apply rounded-lg;
+}
