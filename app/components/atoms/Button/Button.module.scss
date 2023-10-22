@@ -1,0 +1,190 @@
+.btn{
+  @apply
+  relative flex items-center justify-center
+  py-[10px] px-6 h-[34px]
+  text-sm rounded
+  overflow-hidden cursor-pointer
+  transition-all duration-200 ;
+
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+
+  svg{
+    display: inline;
+  }
+
+  &.sm{
+    @apply h-[24px] py-[6px] px-[15px] text-xs;
+
+    svg{
+      @apply h-auto;
+    }
+
+  }
+
+  &.md{
+    @apply  py-[24px] px-[40px] text-lg;
+  }
+
+  &.lg{
+    @apply py-[px] px-6 h-[34px];
+  }
+
+  &.action_btn{
+    @apply
+    py-px px-[6px] h-[30px] max-h-[30px] min-w-[30px];
+    &.sm{
+      @apply h-[22px] max-h-[22] min-w-[30px] py-px px-[8px] text-xs;
+
+      svg{
+        @apply h-auto;
+      }
+
+    }
+
+    &.md{
+      @apply
+      py-px px-[6px] h-[30px] max-h-[30px] min-w-[30px];
+    }
+
+
+  }
+
+  .ripple{
+    @apply bg-slate-100 opacity-60 rounded-full block absolute;
+    content: "";
+    width: 2px;
+    height: 2px;
+    animation: ripple .6s ease-in-out normal;
+    animation-fill-mode: forwards;
+  }
+
+  &:disabled{
+    @apply cursor-not-allowed;
+  }
+
+  &.button-block {
+    @apply flex items-center justify-center w-full;
+  }
+
+  &.primary{
+    @apply bg-primary text-white;
+    &.outline{
+      @apply border border-primary text-primary bg-transparent font-bold;
+      svg{
+        @apply text-primary;
+      }
+      .ripple{
+        @apply bg-primary bg-opacity-40;
+      }
+    }
+  }
+
+  &.secondary{
+    @apply bg-secondary text-black font-bold;
+    &.outline{
+      @apply border border-secondary text-secondary bg-transparent font-bold;
+      svg{
+        @apply text-secondary;
+      }
+      .ripple{
+        @apply bg-secondary bg-opacity-20;
+      }
+    }
+  }
+
+  &.danger{
+    @apply bg-danger text-white;
+    &.outline{
+      @apply border border-danger text-danger bg-transparent font-bold;
+      svg{
+        @apply text-danger;
+      }
+      .ripple{
+        @apply bg-danger bg-opacity-20;
+      }
+    }
+  }
+
+  &.success{
+    @apply bg-success text-white;
+    &.outline{
+      @apply border border-success text-success bg-transparent font-bold;
+      svg{
+        @apply text-success;
+      }
+      .ripple{
+        @apply bg-success bg-opacity-20;
+      }
+    }
+  }
+
+  &.light{
+    @apply bg-gray-200 border text-slate-600;
+    &.outline{
+      @apply border border-[#F0F0F0] text-white bg-transparent font-bold;
+      svg{
+        @apply text-white;
+      }
+      .ripple{
+        @apply bg-[#F0F0F0] bg-opacity-20;
+      }
+    }
+  }
+
+  &.light-secondary{
+    @apply bg-transparent text-gray-700 border  backdrop-blur-md border-[#E7E7E7] shadow-none;
+    &.outline{
+      @apply border-gray-600 text-white;
+    }
+    .ripple{
+      @apply bg-[#ffffff] bg-opacity-20;
+    }
+  }
+
+  &.btn-rounded{
+    @apply rounded-2xl;
+  }
+
+  &.just-icon{
+    @apply p-[6px] font-bold w-7 h-7;
+    &.sm{
+      @apply w-6 h-6;
+    }
+    &.lg{
+      @apply w-8 h-8;
+    }
+    &.btn-rounded{
+      @apply rounded-full p-0;
+    }
+  }
+
+  &.with-bg-opacity{
+    @apply bg-opacity-20 shadow-none border-none;
+
+    &.primary{
+      @apply text-primary;
+    }
+    &.secondary{
+      @apply text-secondary;
+    }
+    &.danger{
+      @apply text-danger;
+    }
+    &.success{
+      @apply text-success;
+    }
+    &.light{
+      @apply text-primary bg-opacity-40;
+    }
+    &.light-secondary{
+      @apply text-secondary bg-opacity-40;
+    }
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(100);
+    opacity: 0;
+  }
+}

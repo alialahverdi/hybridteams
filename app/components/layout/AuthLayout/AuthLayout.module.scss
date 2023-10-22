@@ -1,0 +1,17 @@
+.container {
+  @apply 
+  h-screen bg-darkSecondary py-10 px-20;
+}
+
+.content {
+  @apply flex relative w-full h-full bg-dark rounded-2xl justify-center;
+}
+
+.backgroundForm {
+  @apply w-1/3 flex flex-col justify-center;
+}
+
+.formContainer {
+  @apply px-3 pt-5 pb-3 bg-darkSecondary text-white border-secondary shadow-md absolute w-1/3 mr-20 rounded-lg;
+}
+

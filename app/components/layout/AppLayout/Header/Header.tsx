@@ -1,22 +1,22 @@
+"use client"
+
 import React, { FC } from "react"
 import Link from "next/link"
 
 // Styles
 import styles from "./Header.module.scss"
-import { cs } from "../../../../utils/helper/index"
+import { cs } from "app/utils/helper/index"
 
 
 // Hooks
-// import { useIsTopOfPage } from 'utils/scrollspy'
+import { useIsTopOfPage } from 'app/hooks/useIstopOfPage'
 
 const Header: FC = () => {
-
-    // const isTopOfPage = useIsTopOfPage()
+    const isTopOfPage = useIsTopOfPage()
 
     return (
         <header className={cs(styles.container)}>
-            {/* <div className={cs(styles.header, !isTopOfPage ? styles.scrolled : '')}> */}
-            <div className={cs('')}>
+            <div className={cs(styles.header, !isTopOfPage ? styles.scrolled : '')}>
                 <div className={cs(styles.rightContainer)}>
                     <nav>
                         <ul className={cs(styles.ulLinks)}>

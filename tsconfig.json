@@ -24,11 +24,6 @@
         "name": "next"
       }
     ],
-    "paths": {
-      "@/utils/*": [
-        "utils/*"
-      ]
-    }
   },
   "include": [
     "next-env.d.ts",

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import AppLayout from './components/layout/AppLayout'
+import AppLayout from 'app/components/layout/AppLayout'
 
 export default function Home() {
   return (

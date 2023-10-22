@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from "react"
 
 // Styles
 import styles from "./AppLayout.module.scss"
-import { cs } from "../../../utils/helper/index"
+import { cs } from "app/utils/helper"
 
 // Components
 import Header from "./Header"
