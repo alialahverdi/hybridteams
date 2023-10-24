@@ -12,12 +12,10 @@ const AuthLayout: FC<IAuthLayout> = ({
     children
 }) => {
     return (
-        <main className={cs(styles.container)} >
-            <div className={cs(styles.content)}>
-                <div className={cs(styles.backgroundForm)}>
-                    <div className={cs(styles.formContainer)}>
-                        {children}
-                    </div>
+        <main className={cs(styles.container)}>
+            <div className={cs(styles.backgroundForm)}>
+                <div className={cs(styles.formContainer)}>
+                    {children}
                 </div>
             </div>
         </main>

@@ -1,11 +1,11 @@
-.align {
+.container {
   @apply
-  flex justify-center
-}
-
-.subtitle {
-  @apply
-  mt-5
+  w-full
+  h-screen 
+  flex 
+  bg-dark
+  justify-center
+  items-center;
 }
 
 .form {
@@ -19,16 +19,6 @@
 }
 
 .btn {
-  @apply
-  mt-7
-}
-
-.btnGoogle {
-  @apply
-  mt-12
-}
-
-.forgetPassword {
   @apply
   mt-10
 }

@@ -17,7 +17,7 @@ module.exports = {
         secondary: '#FDB815',
         success: '#00B74A',
         danger: '#F93154',
-        dark: '#1b1b1d',
+        dark: '#161c22',
         darkSecondary: '#2b3137',
         titanium: '#6D6E71'
       }

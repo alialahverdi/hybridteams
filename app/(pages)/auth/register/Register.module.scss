@@ -1,12 +1,14 @@
-.align {
+.container {
   @apply
-  flex justify-center
+  w-full
+  h-screen 
+  flex 
+  bg-dark
+  justify-center
+  items-center;
 }
 
-.subtitle {
-  @apply
-  mt-5
-}
+
 
 .form {
   @apply 
@@ -20,12 +22,7 @@
 
 .btn {
   @apply
-  mt-7
-}
-
-.btnGoogle {
-  @apply
-  mt-12
+  mt-10
 }
 
 .registerContainer {

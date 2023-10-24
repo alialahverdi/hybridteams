@@ -1,7 +1,6 @@
 "use client"
 
 import React, { FC, useState } from "react"
-import Link from 'next/link'
 import { useRouter } from 'next/navigation';
 
 // Styles
@@ -9,8 +8,8 @@ import styles from "./Login.module.scss"
 import { cs } from "app/utils/helper";
 
 // Components
-import AuthLayout from "app/components/layout/AuthLayout";
-import { Text, Button, Input } from "app/components/atoms";
+import { Button, Input } from "app/components/atoms";
+import { FormContainer } from "app/components/organism"
 
 
 export interface ILoginProps { }
@@ -24,30 +23,31 @@ export default function Login() {
     }
 
     return (
-        <AuthLayout>
-            <Text className={cs(styles.align)} size={20}>login in to your account</Text>
+        <main className={cs(styles.container)}>
+            <FormContainer title='Login in to your account'>
+                <form className={cs(styles.form)}>
+                    <Input
+                        inputSize="lg"
+                        placeholder="Enter your username"
+                        label="Username"
+                    />
+                    <Input
+                        inputSize="lg"
+                        placeholder="Enter your password"
+                        label="Password"
+                    />
+                    <Button
+                        size="lg"
+                        block
+                        buttonStyle="secondary"
+                        className={cs(styles.btn)}
+                        onClick={login}
+                    >
+                        Login
+                    </Button>
+                </form>
+            </FormContainer>
 
-            <form className={cs(styles.form)}>
-                <Input
-                    inputSize="lg"
-                    placeholder="Enter your username"
-                    label="Username"
-                />
-                <Input
-                    inputSize="lg"
-                    placeholder="Enter your password"
-                    label="Password"
-                />
-                <Button
-                    size="lg"
-                    block
-                    buttonStyle="secondary"
-                    className={cs(styles.btn)}
-                    onClick={login}
-                >
-                    Login
-                </Button>
-            </form>
-        </AuthLayout>
+        </main>
     )
 }
