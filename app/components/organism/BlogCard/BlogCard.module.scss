@@ -1,0 +1,58 @@
+.container {
+    @apply
+    shadow-lg
+    border
+    border-gray-600
+    relative
+    bg-darkSecondary
+    h-72
+    rounded-2xl
+    flex
+    flex-col
+    justify-end
+    px-6
+    overflow-hidden
+    py-8;
+    &::after{
+        @apply
+        content-['']
+        bg-black
+        bg-opacity-40
+        rounded-2xl
+        absolute
+        left-0
+        right-0
+        top-0
+        bottom-0
+        w-full
+        h-full;
+    }
+    img{
+        @apply
+        absolute
+        top-0
+        bottom-0
+        right-0
+        left-0
+        w-full
+        h-full;
+    }
+}
+
+
+.titleAndtime {
+    @apply
+    text-white
+    z-10
+    flex
+    justify-between
+    mb-4;
+}
+
+.description{
+    @apply
+    z-10
+    text-ellipsis
+    overflow-hidden	
+    text-white;
+}

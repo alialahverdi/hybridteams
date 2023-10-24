@@ -10,7 +10,7 @@ import { cs } from "app/utils/helper";
 
 // Components
 import AuthLayout from "app/components/layout/AuthLayout";
-import { Text, Button, Input } from "app/components/atoms"
+import { Text, Button, Input } from "app/components/atoms";
 
 
 export interface ILoginProps { }
