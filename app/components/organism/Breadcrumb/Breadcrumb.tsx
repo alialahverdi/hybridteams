@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Link from 'next/link';
-import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
+import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
 
 
 // Styles
@@ -27,7 +27,7 @@ const Breadcrumb: FC<BreadcrumbInterface> = ({ items, classname }) => {
                         <div className={styles.list_item}>
                             <Link key={index} href={item.href}>{item.label}</Link>
                         </div>
-                        <MdOutlineKeyboardArrowLeft className={styles.seperator} />
+                        <MdOutlineKeyboardArrowRight className={styles.seperator} />
                     </>
                     : <div className={styles.list_item} key={index}><p>{item.label}</p></div>
             ))}
