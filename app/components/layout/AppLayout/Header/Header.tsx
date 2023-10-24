@@ -24,22 +24,10 @@ const Header: FC = () => {
                                 <Link href="/">Home</Link>
                             </li>
                             <li>
-                                <Link href="/demo">Try Demo</Link>
+                                <Link href="/addPost">Add Post</Link>
                             </li>
                             <li>
-                                <Link href="/document">Document</Link>
-                            </li>
-                            <li>
-                                <Link href="/modules">Modules</Link>
-                            </li>
-                            <li>
-                                <Link href="/about">Support</Link>
-                            </li>
-                            <li>
-                                <Link href="/about">Blog</Link>
-                            </li>
-                            <li>
-                                <Link href="/about">About</Link>
+                                <Link href="/blog">Blog</Link>
                             </li>
                         </ul>
                     </nav>

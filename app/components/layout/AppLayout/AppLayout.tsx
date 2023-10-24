@@ -17,7 +17,9 @@ const AppLayout: FC<IAppLayout> = ({
     return (
         <main className={cs(styles.container)}>
             <Header />
-            <div>{children}</div>
+            <div className={cs(styles.childrenContainer)}>
+                {children}
+            </div>
         </main>
     )
 }

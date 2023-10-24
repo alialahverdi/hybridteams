@@ -3,5 +3,11 @@
     flex
     flex-col
     bg-dark;
-  }
+
+    .childrenContainer {
+      @apply
+      bg-dark
+      h-screen;
+    }
+}
   
