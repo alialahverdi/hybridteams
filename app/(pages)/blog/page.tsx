@@ -24,7 +24,6 @@ export default function Blog() {
         <AppLayout>
             <div className={cs(styles.breadcrumbContainer)}>
                 <Breadcrumb items={breadcrumbItems} />
-                <Text>dawd</Text>
             </div>
             <div className={cs(styles.preview)}>
                 <img src="https://picsum.photos/536/354" />

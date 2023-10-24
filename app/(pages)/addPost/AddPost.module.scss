@@ -1,0 +1,26 @@
+.container {
+  @apply
+  w-full
+  h-screen 
+  flex 
+  bg-dark
+  justify-center
+  items-center;
+}
+
+
+
+.form {
+  @apply 
+  w-full
+  flex 
+  flex-col 
+  items-center
+  px-10
+  py-5;
+}
+
+.btn {
+  @apply
+  mt-10
+}

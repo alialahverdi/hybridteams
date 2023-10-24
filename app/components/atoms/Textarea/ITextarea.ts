@@ -2,11 +2,6 @@ export type InputFiledSize = 'sm' | 'md' | 'lg';
 
 type direction = 'rtl' | 'ltr';
 
-export type CustomInputType = {
-    name: string | number | null,
-    value: string | number | null
-}
-
 export interface IInputBase {
     inputSize?: InputFiledSize
     label?: string | JSX.Element
@@ -21,14 +16,9 @@ export interface IInputBase {
     withoutLabel?: boolean
 }
 
-export interface IInput extends
+export interface ITextarea extends
     IInputBase,
     React.DetailedHTMLProps<
-        React.InputHTMLAttributes<HTMLInputElement>,
-        HTMLInputElement
-    > {
-    addBefore?: React.ReactNode
-    addAfter?: React.ReactNode
-}
-
-
+        React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+        HTMLTextAreaElement
+    > { }

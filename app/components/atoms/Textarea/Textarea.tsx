@@ -1,11 +1,11 @@
 import React from 'react'
-import { IInput } from './IInput';
+import { ITextarea } from './ITextarea';
 
 // Styles
-import style from "./Input.module.scss";
+import style from "./Textarea.module.scss";
 import { cs } from "app/utils/helper";
 
-const Input = (props: IInput) => {
+const Textarea = (props: ITextarea) => {
 
     return (
         <div
@@ -22,7 +22,7 @@ const Input = (props: IInput) => {
             }
 
             <div className={style.content}>
-                <input
+                <textarea
                     {...props}
                     className={cs(
                         style['form-input'],
@@ -36,4 +36,4 @@ const Input = (props: IInput) => {
     )
 }
 
-export default Input;
+export default Textarea;
