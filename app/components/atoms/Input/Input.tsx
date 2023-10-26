@@ -26,7 +26,7 @@ const Input = (props: IInput) => {
                     {...props}
                     className={cs(
                         style['form-input'],
-                        style[`${!!props.inputSize ? props.inputSize : 'md'}`],
+                        style[`${!!props.inputsize ? props.inputsize : 'md'}`],
                     )}
                 />
             </div>

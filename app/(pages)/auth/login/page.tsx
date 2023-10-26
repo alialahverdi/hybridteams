@@ -27,12 +27,12 @@ export default function Login() {
             <FormContainer title='Login in to your account'>
                 <form className={cs(styles.form)}>
                     <Input
-                        inputSize="lg"
+                        inputsize="lg"
                         placeholder="Enter your username"
                         label="Username"
                     />
                     <Input
-                        inputSize="lg"
+                        inputsize="lg"
                         placeholder="Enter your password"
                         label="Password"
                     />

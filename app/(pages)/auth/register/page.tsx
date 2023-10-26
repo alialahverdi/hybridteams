@@ -32,17 +32,17 @@ export default function Register() {
             <FormContainer title='Sign in to your account'>
                 <form className={cs(styles.form)}>
                     <Input
-                        inputSize="lg"
+                        inputsize="lg"
                         placeholder="Enter your username"
                         label="Username"
                     />
                     <Input
-                        inputSize="lg"
+                        inputsize="lg"
                         placeholder="Enter your email"
                         label="Email"
                     />
                     <Input
-                        inputSize="lg"
+                        inputsize="lg"
                         placeholder="Enter your password"
                         label="Password"
                     />

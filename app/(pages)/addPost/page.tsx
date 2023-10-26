@@ -32,12 +32,12 @@ export default function AddPost() {
             <FormContainer title='Create new post'>
                 <form className={cs(styles.form)}>
                     <Input
-                        inputSize="lg"
+                        inputsize="lg"
                         placeholder="Enter the title"
                         label="Title"
                     />
                     <Textarea
-                        inputSize="lg"
+                        inputsize="lg"
                         placeholder="Enter your password"
                         label="Content"
                     />
