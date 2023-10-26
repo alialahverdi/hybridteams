@@ -1,3 +1,8 @@
+import {
+    FieldValues,
+    UseFormRegister,
+} from 'react-hook-form'
+
 export type InputFiledSize = 'sm' | 'md' | 'lg';
 
 type direction = 'rtl' | 'ltr';
@@ -21,4 +26,7 @@ export interface ITextarea extends
     React.DetailedHTMLProps<
         React.TextareaHTMLAttributes<HTMLTextAreaElement>,
         HTMLTextAreaElement
-    > { }
+    > {
+    register?: UseFormRegister<FieldValues>
+    id: string
+}

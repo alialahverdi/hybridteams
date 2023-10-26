@@ -13,6 +13,9 @@ import { Button, Input, Text } from "app/components/atoms";
 import { FormContainer } from "app/components/organism";
 import { useForm } from "react-hook-form";
 
+// API
+import api from 'app/services/axiosInstance'
+
 
 export interface ILoginProps { }
 
@@ -22,7 +25,8 @@ export default function Login() {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (fields: any) => {
-        // router.push('/')
+        await localStorage.setItem('isAuth', 'true')
+        router.push('/')
     }
 
     return (
@@ -33,11 +37,11 @@ export default function Login() {
                     onSubmit={handleSubmit(onSubmit)}
                 >
                     <Input
-                        id="username"
+                        id="email"
                         register={register}
                         inputsize="lg"
-                        placeholder="Enter your username"
-                        label="Username"
+                        placeholder="Enter your email"
+                        label="Email"
                     />
                     <Input
                         id="password"
@@ -49,7 +53,7 @@ export default function Login() {
                     <Button
                         size="lg"
                         block
-                        buttonStyle="secondary"
+                        buttonstyle="secondary"
                         className={cs(styles.btn)}
                         type="submit"
                     >

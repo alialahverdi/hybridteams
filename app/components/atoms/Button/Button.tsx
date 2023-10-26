@@ -31,10 +31,10 @@ const Button = (props: IButton) => {
             disabled={props.disabled || props.loading}
             className={cs(
                 style['btn'],
-                !!props.block ? style['button-block'] : '',
+                style['button-block'],
                 !!props.outline ? style['outline'] : '',
                 !!props.size ? style[`${props.size}`] : '',
-                !!props.buttonStyle ? style[`${props.buttonStyle}`] : '',
+                !!props.buttonstyle ? style[`${props.buttonstyle}`] : '',
                 !!props.rounded ? style['btn-rounded'] : '',
                 !!props.justIcon ? style['just-icon'] : '',
                 !!props.withBgOpacity ? style['with-bg-opacity'] : '',

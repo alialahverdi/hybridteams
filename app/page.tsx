@@ -1,7 +1,7 @@
 "use client"
 
-import AppLayout from 'app/components/layout/AppLayout'
-import withAuth from './components/layout/withAuth'
+import AppLayout from "app/components/layout/AppLayout"
+import withAuth from "app/components/layout/withAuth"
 
 // Styles
 import styles from "./Home.module.scss"
@@ -12,7 +12,7 @@ function Home() {
     <AppLayout>
       <div className={cs(styles.heroSlider)}>
         <h1 className={cs(styles.title)}>
-          Hi Ali!
+          Hi Dear!
         </h1>
         <h6 className={styles.subtitle}>You are logged in to Hybridteams project</h6>
       </div>

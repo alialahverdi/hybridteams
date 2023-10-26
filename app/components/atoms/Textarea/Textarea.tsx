@@ -6,7 +6,7 @@ import style from "./Textarea.module.scss";
 import { cs } from "app/utils/helper";
 
 const Textarea = (props: ITextarea) => {
-
+    const { label, id, inputsize, register, ...rest } = props
     return (
         <div
             className={cs(
@@ -23,7 +23,8 @@ const Textarea = (props: ITextarea) => {
 
             <div className={style.content}>
                 <textarea
-                    {...props}
+                    {...register(id)}
+                    {...rest}
                     className={cs(
                         style['form-input'],
                         style[`${!!props.inputsize ? props.inputsize : 'md'}`],

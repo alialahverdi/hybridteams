@@ -9,49 +9,57 @@ import styles from "./AddPost.module.scss";
 import { cs } from "app/utils/helper";
 
 // Components
-import { Text, Button, Input, Textarea } from "app/components/atoms"
-import { FormContainer } from "app/components/organism"
+import { Button, Input, Textarea } from "app/components/atoms";
+import { FormContainer } from "app/components/organism";
+import { useForm } from "react-hook-form";
+import AppLayout from "app/components/layout/AppLayout"
 
 
 export default function AddPost() {
 
     // ------- Constants ------- //
     const router = useRouter();
+    const { register, handleSubmit } = useForm();
 
     // ------- Logic or Functions ------- //
-    const onSendConfirmationCode = () => {
-        // setStage("confirmPassword")
-    }
 
-    const onConfirm = () => {
-        router.push('/')
+    const onSubmit = () => {
+        router.push('/blog')
     }
 
     return (
-        <main className={cs(styles.container)}>
-            <FormContainer title='Create new post'>
-                <form className={cs(styles.form)}>
-                    <Input
-                        inputsize="lg"
-                        placeholder="Enter the title"
-                        label="Title"
-                    />
-                    <Textarea
-                        inputsize="lg"
-                        placeholder="Enter your password"
-                        label="Content"
-                    />
-                    <Button
-                        size="lg"
-                        block
-                        buttonStyle="secondary"
-                        className={cs(styles.btn)}
-                        onClick={onSendConfirmationCode}
+        <AppLayout>
+            <div className={cs(styles.container)}>
+                <FormContainer title='Create new post'>
+                    <form
+                        className={cs(styles.form)}
+                        onSubmit={handleSubmit(onSubmit)}
                     >
-                        Confirm
-                    </Button>
-                </form>
-            </FormContainer>
-        </main>
+                        <Input
+                            id="title"
+                            register={register}
+                            inputsize="lg"
+                            placeholder="Enter the title"
+                            label="Title"
+                        />
+                        <Textarea
+                            id="Content"
+                            register={register}
+                            inputsize="lg"
+                            placeholder="Enter your password"
+                            label="Content"
+                        />
+                        <Button
+                            size="lg"
+                            buttonstyle="secondary"
+                            className={cs(styles.btn)}
+                            type="submit"
+                        >
+                            Confirm
+                        </Button>
+                    </form>
+                </FormContainer>
+            </div>
+        </AppLayout>
     )
 }

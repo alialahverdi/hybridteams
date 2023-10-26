@@ -27,13 +27,8 @@ export default function Register() {
     const { register, handleSubmit } = useForm();
 
     // ------- Logic or Functions ------- //
-    const onSendConfirmationCode = () => {
-        // setStage("confirmPassword")
-    }
-
     const onSubmit = (fields: any) => {
-        console.log('fields', fields)
-        // router.push('/')
+        router.push('/auth/login')
     }
 
     return (
@@ -66,8 +61,7 @@ export default function Register() {
                     />
                     <Button
                         size="lg"
-                        block
-                        buttonStyle="secondary"
+                        buttonstyle="secondary"
                         className={cs(styles.btn)}
                         type="submit"
                     >
