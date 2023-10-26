@@ -21,7 +21,7 @@ export default function Login() {
     const router = useRouter();
     const { register, handleSubmit } = useForm();
 
-    const onSubmit = (fields: any) => {
+    const onSubmit = async (fields: any) => {
         // router.push('/')
     }
 

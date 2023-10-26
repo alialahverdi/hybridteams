@@ -1,11 +1,13 @@
-import Image from 'next/image'
+"use client"
+
 import AppLayout from 'app/components/layout/AppLayout'
+import withAuth from './components/layout/withAuth'
 
 // Styles
 import styles from "./Home.module.scss"
 import { cs } from "app/utils/helper"
 
-export default function Home() {
+function Home() {
   return (
     <AppLayout>
       <div className={cs(styles.heroSlider)}>
@@ -17,3 +19,5 @@ export default function Home() {
     </AppLayout>
   )
 }
+
+export default withAuth(Home)
