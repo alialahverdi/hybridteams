@@ -6,7 +6,7 @@ import style from "./Input.module.scss";
 import { cs } from "app/utils/helper";
 
 const Input = (props: IInput) => {
-
+    const { label, id, inputsize, register, ...rest } = props
     return (
         <div
             className={cs(
@@ -17,21 +17,20 @@ const Input = (props: IInput) => {
         >
             {
                 !props.withoutLabel
-                    ? <label htmlFor={props.id}>{props.label}</label>
+                    ? <label htmlFor={id}>{label}</label>
                     : ''
             }
 
             <div className={style.content}>
                 <input
-                    {...props}
+                    {...register(id)}
+                    {...rest}
                     className={cs(
                         style['form-input'],
-                        style[`${!!props.inputsize ? props.inputsize : 'md'}`],
+                        style[`${!!inputsize ? inputsize : 'md'}`],
                     )}
                 />
             </div>
-
-
         </div>
     )
 }

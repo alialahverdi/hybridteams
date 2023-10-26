@@ -1,3 +1,11 @@
+import {
+    FieldValues,
+    UseFormRegister,
+    UseFormUnregister,
+    UseFormSetValue,
+    UseFormGetValues,
+} from 'react-hook-form'
+
 export type InputFiledSize = 'sm' | 'md' | 'lg';
 
 type direction = 'rtl' | 'ltr';
@@ -27,8 +35,8 @@ export interface IInput extends
         React.InputHTMLAttributes<HTMLInputElement>,
         HTMLInputElement
     > {
-    addBefore?: React.ReactNode
-    addAfter?: React.ReactNode
+    register?: UseFormRegister<FieldValues>
+    id: string
 }
 
 

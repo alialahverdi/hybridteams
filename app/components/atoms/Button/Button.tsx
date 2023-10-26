@@ -25,7 +25,7 @@ const Button = (props: IButton) => {
     return (
         <button
             {...props}
-            type="button"
+            type={props.type || 'button'}
             ref={buttonRef}
             onClick={handleButtonClick}
             disabled={props.disabled || props.loading}

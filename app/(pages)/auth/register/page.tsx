@@ -11,37 +11,55 @@ import { cs } from "app/utils/helper";
 // Components
 import { Text, Button, Input } from "app/components/atoms"
 import { FormContainer } from "app/components/organism"
+import { useForm } from "react-hook-form"
 
+// Type Cheking
+interface Inputs {
+    username: string
+    email: string
+    Password: string
+}
 
 export default function Register() {
 
     // ------- Constants ------- //
     const router = useRouter();
+    const { register, handleSubmit } = useForm();
 
     // ------- Logic or Functions ------- //
     const onSendConfirmationCode = () => {
         // setStage("confirmPassword")
     }
 
-    const onConfirm = () => {
-        router.push('/')
+    const onSubmit = (fields: any) => {
+        console.log('fields', fields)
+        // router.push('/')
     }
 
     return (
         <main className={cs(styles.container)}>
             <FormContainer title='Sign in to your account'>
-                <form className={cs(styles.form)}>
+                <form
+                    className={cs(styles.form)}
+                    onSubmit={handleSubmit(onSubmit)}
+                >
                     <Input
+                        id="username"
+                        register={register}
                         inputsize="lg"
                         placeholder="Enter your username"
                         label="Username"
                     />
                     <Input
+                        id="email"
+                        register={register}
                         inputsize="lg"
                         placeholder="Enter your email"
                         label="Email"
                     />
                     <Input
+                        id="password"
+                        register={register}
                         inputsize="lg"
                         placeholder="Enter your password"
                         label="Password"
@@ -51,7 +69,7 @@ export default function Register() {
                         block
                         buttonStyle="secondary"
                         className={cs(styles.btn)}
-                        onClick={onSendConfirmationCode}
+                        type="submit"
                     >
                         Confirm
                     </Button>
